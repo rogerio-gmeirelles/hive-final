@@ -10,7 +10,7 @@ Para utilização e teste do protótipo navegável da solução, acessar o segui
 https://marvelapp.com/dd1e889
 
 <p align="center">
-  <img src="hive-final/Protótipos-Mockups/indice.jpg" />
+  <img src="/Protótipos-Mockups/indice.jpg">
 </p>
 
 
