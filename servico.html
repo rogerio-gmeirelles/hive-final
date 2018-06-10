@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title>Hive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<div class="w3-bar w3-top w3-deep-purple w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <img src="logo_white_header.svg" style="width:7%; margin-bottom:8px; margin-top:6px;margin-left:6px">
+  
+  
+</div>
+
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:200px;" id="Sidebar"><br>
+   
+  <div class="w3-bar-block">
+    <a href="Dashboard.html" class="w3-bar-item w3-button w3-padding  w3-purple"><i class="fa fa-bar-chart fa-fw"></i> Dashboard </a>
+    <a href="pesquisa.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-briefcase"></i>  Serviços </a>
+    <a href="Login.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sign-out fa-fw"></i>  Sair </a><br><br>
+  </div>
+</nav>
+
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:200px;margin-top:43px;">
+    <div class="w3-twothird">
+        
+        <div class="w3-card-2 w3-margin-left w3-white " style="padding-top:20px; padding-bottom:20px" >
+            
+            <header class="w3-container w3-margin-left" style="padding-left: 20px">
+                <div class="w3-quarter">
+                    <img src="img_armazenamento_de_dados.svg" style="width:50%; margin-bottom:8px; margin-top:6px;margin-left:6px">
+                </div>
+                <div class="w3-third">
+                    <h3><b> Banco de dados HPE</b></h3>
+                </div>
+            </header>
+            
+            <div class="w3-light-gray w3-round" style="width:100%; margin-left:20px">
+                <div class="w3-container w3-round w3-green" style="width:25%; padding-left:20px">25%</div>
+            </div> 
+ 
+            <div class="w3-panel " align="justify" style="margin-left:20px; padding-top:15px; padding-bottom:3px; width:95%">
+                Os aplicativos conduzidos por dados estão no coração das empresas digitais. No entanto, o desempenho, a disponibilidade e a proteção de dados dos aplicativos continuam dependendo unicamente da solidez da base de sua infraestrutura. Com o Armazenamento HPE, você terá uma infraestrutura de armazenamento preditiva, pronta para a nuvem e atemporal. Projetado para otimizar ambientes Microsoft, SAP e Oracle, o armazenamento HPE oferece análise preditiva, serviços de dados de Camada 1 totalmente expansíveis e proteção de dados rápida.
+                
+            </div>
+
+            <div class="w3-panel " align="justify" style="margin-left:20px; padding-top:5px; padding-bottom:3px; width:95%">
+                <div class="w3-threequarter">    
+                   <h4><b>Valor do Contrato</b></h4>
+                </div>     
+            </div>
+
+            <div class="w3-panel " align="justify" style="margin-left:20px; padding-top:5px; padding-bottom:5px; width:95%">
+                    <div class="w3-quarter">    
+                        <img src="money.svg" style="width:30%; margin-bottom:8px; margin-top:6px;margin-left:6px">
+                    </div>
+                    <div class="w3-twoquarter">    
+                            <h4><font color="5BC445"><b>R$ 5,000.00 / ano</b></font></h4>
+                    </div>   
+                          
+            </div>
+
+        </div>
+    </div>
+
+
+    
+    <div class="w3-third">
+        <div class="w3-container  w3-white" style="padding-top:20px; padding-bottom:100px; margin-left:10px margin-right:20px " >
+ 
+                <div class="w3-container" style="margin-left:10px; padding-top:10px; padding-bottom:10px; margin-right:10px">
+                      <h4> <b> Progresso</b></h4>
+                 </div>
+
+                <div class="w3-card-2 w3-green" style="margin-left:10px; padding-top:10px; padding-bottom:10px; margin-right:10px">
+                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-check-square-o"></i> Empresa 01 aceitou contrato </a>
+                 </div>
+                 <div class="w3-card-2 w3-green" style="margin-left:10px; padding-top:10px; padding-bottom:10px; margin-right:10px">
+                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-check-square-o"></i> Empresa 02 aceitou contrato </a>
+                 </div>
+                 <div class="w3-card-2 w3-red" style="margin-left:10px; padding-top:10px; padding-bottom:10px; margin-right:10px">
+                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-close"></i> Empresa 3 recusou </a>
+                 </div>
+                 <div class="w3-card-2 w3-gray" style="margin-left:10px; padding-top:2px; padding-bottom:10px; margin-right:10px">
+                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-minus-square-o"></i> Pendente </a>
+                 </div>
+                 <div class="w3-card-2 w3-gray" style="margin-left:10px; padding-top:10px;  margin-right:10px">
+                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-minus-square-o"></i> pendente </a>
+                 </div>
+                 <div class="w3-card-2 w3-gray" style="margin-left:10px; padding-top:10px;  margin-right:10px">
+                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-minus-square-o"></i> pendente </a>
+                 </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>

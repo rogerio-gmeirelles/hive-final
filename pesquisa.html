@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="pesquisa.css">
+  <!-- <script src="pesquisa.js"></script> -->
+  
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<title></title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+ $('#search').keyup(function(){
+ 
+  // Search text
+  var text = $(this).val();
+ 
+  // Hide all content class element
+  $('.content').hide();
+
+  // Search 
+  $('.content .title:contains("'+text+'")').closest('.content').show();
+ 
+ });
+});
+
+$.expr[":"].contains = $.expr.createPseudo(function(arg) {
+  return function( elem ) {
+   return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+  };
+});
+</script>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" type="text/css" href="servico.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-deep-purple w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <img src="logo_white_header.svg" style="width:7%; margin-bottom:8px; margin-top:6px;margin-left:6px">
+</div>
+
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:250px;" id="Sidebar"><br>
+   
+  <div class="w3-bar-block">
+    <a href="Dashboard.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bar-chart fa-fw"></i> Dashboard </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding   w3-purple"><i class="fa fa-briefcase"></i>  Serviços </a>
+    <a href="Login.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sign-out fa-fw"></i>  Sair </a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px;margin-top:43px;">
+  
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div id="imaginary_container"> 
+					<div class="input-group stylish-input-group">
+						<input id="search" type="text" class="form-control"  placeholder="Procurar por serviços ou empresas..." >
+						<span class="input-group-addon">
+							<button type="submit">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>  
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="w3-row-padding w3-margin-bottom" style="padding-top:22px">
+		<div class="w3-quarter content" style="padding-bottom:22px">
+			<div class="w3-card-4" >
+				<header class="w3-container w3-white title wrap" style="padding-bottom:4px">
+				  <h3>Armazenamento em nuvem</h3>
+				  <h5><u>Microsoft</u></h5>
+				</header>
+				<div class="w3-container title">
+				  <p>Um servidor de sites nada mais é que um computador conectado a internet, especialmente configurado para armazenar arquivos e permitir o acesso a eles via internet.</p>
+				</div>
+				<P></P>
+				<footer class="w3-container w3-deep-purple">
+				  <div class="w3-half">
+					<h5>R$19.000,00</h5>
+				  </div>
+				  <div class="w3-half" style="padding-top:2px" align="right">
+				    <a href="#">
+					  <button class="w3-button w3-white w3-round w3-tiny w3-hover-light-grey">SABER MAIS</button>
+					</a>
+				  </div>
+				</footer>
+			</div>
+		</div>
+		<div class="w3-quarter content" style="padding-bottom:22px">
+			<div class="w3-card-4">
+				<header class="w3-container w3-white title wrap" style="padding-bottom:4px">
+				  <h3>Armazenamento em nuvem</h3>
+				  <h5><u>Amazon</u></h5>
+				</header>
+				<div class="w3-container title">
+				  <p>Reduza o tempo de colocação no mercado oferecendo recursos com mais agilidade e mais de 100 serviços de ponta a ponta. Crie aplicativos inteligentes usando dados eficientes e serviços de inteligência artificial.</p>
+				</div>
+				<footer class="w3-container w3-deep-purple">
+				  <div class="w3-half">
+					<h5>R$19.000,00</h5>
+				  </div>
+				  <div class="w3-half" style="padding-top:2px" align="right">
+				    <a href="#">
+					  <button class="w3-button w3-white w3-round w3-tiny w3-hover-light-grey">SABER MAIS</button>
+					</a>
+				  </div>
+				</footer>
+			</div>
+		</div>
+		<div class="w3-quarter content" style="padding-bottom:22px">
+			<div class="w3-card-4">
+				<header class="w3-container w3-white title wrap" style="padding-bottom:4px">
+				  <h3>Hospedagem de servidor</h3>
+				  <h5><u>Google</u></h5>
+				</header>
+				<div class="w3-container title">
+				  <p>Os Servidores proporcionam de forma consistente os mais altos níveis de desempenho na execução de uma ampla gama de aplicativos empresariais. Foram projetados para fornecer um alto desempenho.</p>
+					</div>
+				<footer class="w3-container w3-deep-purple">
+				  <div class="w3-half">
+					<h5>R$19.000,00</h5>
+				  </div>
+				  <div class="w3-half" style="padding-top:2px" align="right">
+				    <a href="#">
+					  <button class="w3-button w3-white w3-round w3-tiny w3-hover-light-grey">SABER MAIS</button>
+					</a>
+				  </div>
+				</footer>
+			</div>
+		</div>
+		<div class="w3-quarter content" style="padding-bottom:22px">
+			<div class="w3-card-4">
+				<header class="w3-container w3-white title wrap" style="padding-bottom:4px">
+				  <h3>Armazenamento em nuvem</h3>
+				  <h5><u>Google</u></h5>
+				</header>
+				<div class="w3-container title">
+				  <p>Reduza o tempo de colocação no mercado oferecendo recursos com mais agilidade e mais de 100 serviços de ponta a ponta. Crie aplicativos inteligentes usando dados eficientes e serviços de inteligência artificial.</p>
+				</div>
+				<footer class="w3-container w3-deep-purple">
+				  <div class="w3-half">
+					<h5>R$19.000,00</h5>
+				  </div>
+				  <div class="w3-half" style="padding-top:2px" align="right">
+				    <a href="#">
+					  <button class="w3-button w3-white w3-round w3-tiny w3-hover-light-grey">SABER MAIS</button>
+					</a>
+				  </div>
+				</footer>
+			</div>
+		</div>
+		<div class="w3-quarter content" style="padding-bottom:22px">
+			<div class="w3-card-4">
+				<header class="w3-container w3-white title wrap" style="padding-bottom:4px">
+				  <h3>Hospedagem de servidor</h3>
+				  <h5><u>Empresa ABC</u></h5>
+				</header>
+				<div class="w3-container title">
+				  <p>Os Servidores proporcionam de forma consistente os mais altos níveis de desempenho na execução de uma ampla gama de aplicativos empresariais. Foram projetados para fornecer um alto desempenho.</p>
+				</div>
+				<footer class="w3-container w3-deep-purple">
+				  <div class="w3-half">
+					<h5>R$19.000,00</h5>
+				  </div>
+				  <div class="w3-half" style="padding-top:2px" align="right">
+				    <a href="#">
+					  <button class="w3-button w3-white w3-round w3-tiny w3-hover-light-grey">SABER MAIS</button>
+					</a>
+				  </div>
+				</footer>
+			</div>
+		</div>
+		<div class="w3-quarter content" style="padding-bottom:22px">
+			<div class="w3-card-4">
+				<header class="w3-container w3-white title wrap" style="padding-bottom:4px">
+				  <h3>Hospedagem de servidor</h3>
+				  <h5><u>Empresa XYZ</u></h5>
+				</header>
+				<div class="w3-container title">
+				  <p>Os Servidores proporcionam de forma consistente os mais altos níveis de desempenho na execução de uma ampla gama de aplicativos empresariais. Foram projetados para fornecer um alto desempenho.</p>
+				</div>
+				<footer class="w3-container w3-deep-purple">
+				  <div class="w3-half">
+					<h5>R$19.000,00</h5>
+				  </div>
+				  <div class="w3-half" style="padding-top:2px" align="right">
+				    <a href="#">
+					  <button class="w3-button w3-white w3-round w3-tiny w3-hover-light-grey">SABER MAIS</button>
+					</a>
+				  </div>
+				</footer>
+			</div>
+		</div>
+		<div class="w3-quarter content" style="padding-bottom:22px">
+			<div class="w3-card-4">
+				<header class="w3-container w3-white title wrap" style="padding-bottom:4px">
+				  <h3>Armazenamento em nuvem</h3>
+				  <h5><u>Empresa ABC</u></h5>
+				</header>
+				<div class="w3-container title">
+				  <p>Reduza o tempo de colocação no mercado oferecendo recursos com mais agilidade e mais de 100 serviços de ponta a ponta. Crie aplicativos inteligentes usando dados eficientes e serviços de inteligência artificial.</p>
+				</div>
+				<footer class="w3-container w3-deep-purple">
+				  <div class="w3-half">
+					<h5>R$19.000,00</h5>
+				  </div>
+				  <div class="w3-half" style="padding-top:2px" align="right">
+				    <a href="#">
+					  <button class="w3-button w3-white w3-round w3-tiny w3-hover-light-grey">SABER MAIS</button>
+					</a>
+				  </div>
+				</footer>
+			</div>
+		</div>
+	</div>
+  <br>
+  <!-- End page content -->
+</div>
+</body>
+</html>
