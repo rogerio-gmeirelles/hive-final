@@ -1,4 +1,5 @@
-# hive-final
+# Hive
+
 Projeto desenvolvido pelo grupo Hive para o 2º Hackathon CIAB FEBRABAN.
 
 Para execução do código HTML do projeto, faça o download da pasta front e abra o arquivo Login.html em um browser.
